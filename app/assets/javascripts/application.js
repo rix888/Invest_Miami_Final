@@ -14,3 +14,39 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+
+$( document ).ready(function(){
+   $(".button-collapse").sideNav();
+})
+
+$(document).ready(function(){
+  $('.slider').slider({full_width: true});
+});
+
+$(function () {
+    $('#highcharts1').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Fruit Consumption'
+        },
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit eaten'
+            }
+        },
+        series: [{
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
+        }],
+    });
+});
