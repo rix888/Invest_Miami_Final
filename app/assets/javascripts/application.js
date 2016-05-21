@@ -250,8 +250,6 @@ $(document).ready(function() {
          ['10000+', 4.67],
       ]
    }];
-// **** 82.25, 4.80, 2.45, 1.41, 0.53, 0.50, 0.38, 0.52, 0.88, 1.01, 0.60, 4.67
-
 
    var json = {};
    json.chart = chart;
@@ -275,7 +273,7 @@ $(document).ready(function() {
       text: 'Source: Census.gov'
    };
    var xAxis = {
-      categories: ['1 to 4', '5 to 9', '10 to 19', '20 - 49', '50 to 99', '100 to 249', '250 to 249',
+      categories: ['1 to 4', '5 to 9', '10 to 19', '20 to 49', '50 to 99', '100 to 249', '250 to 249',
                   '500 to 999', '1,000 to 2,499', '2,500 to 4,999', '5,000 to 9,999', '10,000+'],
       crosshair: true,
       title: {
@@ -327,3 +325,6 @@ $(document).ready(function() {
    $('#highcharts5').highcharts(json);
 
     });
+
+    // Invest Miami Tweeter feed
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
