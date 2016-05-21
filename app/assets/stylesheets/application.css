@@ -35,11 +35,15 @@ nav{
    color: black;
  }
 .slider .indicators .indicator-item.active{
-  background-color: red;
+  background-color: #d82928;
 }
 
 .slider .slides li img{
   opacity: 0.5;
+}
+
+.red-font{
+  color: #d82928;
 }
 
  /* ================ The Timeline ================ */
