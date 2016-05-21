@@ -77,4 +77,27 @@
 	</li>
 
 </ul>
+
+
+<div id="recent_posts">
+  <h3>Recent Invest Miami Posts</h3>
+  <ul>
+    <% for entry in FeedEntry.all %>
+    <li><%= link_to entry.name, entry.url %>
+      <p><%#= entry.summary %>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+
+<div id="recent_posts">
+  <h3>Recent Real Estate Miami Posts</h3>
+  <ul>
+    <% for entry in FeedEntry.realEstateFeed %>
+    <li><%= link_to entry.title, entry.url %>
+      <p><%#= entry.summary %>
+    </li>
+    <% end %>
+  </ul>
 </div>
