@@ -101,3 +101,15 @@
     <% end %>
   </ul>
 </div>
+
+
+<div id="recent_posts">
+  <h3>Recent Healthcare Miami Posts</h3>
+  <ul>
+    <% for entry in FeedEntry.healthFeed %>
+    <li><%= link_to entry.title, entry.url %>
+      <p><%#= entry.summary %>
+    </li>
+    <% end %>
+  </ul>
+</div>
