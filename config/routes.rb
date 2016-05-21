@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :enterprises
   resources :industries
   resources :models
+  resources :charges
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
