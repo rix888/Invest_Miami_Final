@@ -52,6 +52,10 @@ nav{
 .chart-container{
   background-color: #F2F2F2;
 }
+
+.charts{
+  margin-top: 90px;
+}
  /* ================ The Timeline ================ */
 .process{
   background-color: #212121;
