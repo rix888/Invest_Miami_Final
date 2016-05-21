@@ -350,3 +350,15 @@ nav{
  }
 
  }
+
+ .tweets-header{
+   text-align: center;
+   color: white;
+   padding-top: 50px;
+   margin-bottom: 30px;
+ }
+
+ .twitter-feed{
+   background-image: url("avatar_all.png");
+   background-color: black;
+ }
