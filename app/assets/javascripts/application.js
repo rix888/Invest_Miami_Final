@@ -52,7 +52,7 @@ $(document).ready(function(){
 //         }],
 //     });
 // });
-//
+
 // highcharts2
 $(document).ready(function() {
    var chart = {
@@ -199,3 +199,131 @@ $(document).ready(function() {
 
    $('#highcharts3').highcharts(json);
 });
+
+
+// highcharts4
+$(document).ready(function() {
+   var chart = {
+       plotBackgroundColor: null,
+       plotBorderWidth: null,
+       plotShadow: false
+   };
+   var title = {
+      text: 'Firm size breakdown in Miami-Dade County (2013)'
+   };
+   var tooltip = {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+   };
+   var plotOptions = {
+      pie: {
+         allowPointSelect: true,
+         cursor: 'pointer',
+         dataLabels: {
+            enabled: true,
+            format: '<b>{point.name}%</b>: {point.percentage:.1f} %',
+            style: {
+               color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+            }
+         }
+      }
+   };
+   var series= [{
+      type: 'pie',
+      name: 'Firm size',
+      data: [
+        {
+           name: '1 to 4',
+           y: 82.25,
+           sliced: true,
+           selected: true
+        },
+         ['5 to 9', 4.8],
+         ['10 to 19', 2.45],
+         ['20 to 49', 1.41],
+         ['50 to 99', 0.53],
+         ['100 to 249', 0.5],
+         ['250 to 499', 0.38 ],
+         ['500 to 999', 0.52 ],
+         ['1000 to 2499', 0.88],
+         ['2500 to 4999', 1.01],
+         ['5000 to 9999', 0.60],
+         ['10000+', 4.67],
+      ]
+   }];
+// **** 82.25, 4.80, 2.45, 1.41, 0.53, 0.50, 0.38, 0.52, 0.88, 1.01, 0.60, 4.67
+
+
+   var json = {};
+   json.chart = chart;
+   json.title = title;
+   json.tooltip = tooltip;
+   json.series = series;
+   json.plotOptions = plotOptions;
+   $('#highcharts4').highcharts(json);
+});
+
+
+// highcharts5
+$(document).ready(function() {
+   var chart = {
+      type: 'column'
+   };
+   var title = {
+      text: 'Correlation of job creation and firm size for Miami-Dade County (2013)'
+   };
+   var subtitle = {
+      text: 'Source: Census.gov'
+   };
+   var xAxis = {
+      categories: ['1 to 4', '5 to 9', '10 to 19', '20 - 49', '50 to 99', '100 to 249', '250 to 249',
+                  '500 to 999', '1,000 to 2,499', '2,500 to 4,999', '5,000 to 9,999', '10,000+'],
+      crosshair: true,
+      title: {
+      text: 'Firm size'
+      }
+   };
+   var yAxis = {
+      min: 0,
+      title: {
+         text: 'Jobs created'
+      }
+   };
+   var tooltip = {
+      headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+      pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+         '<td style="padding:0"><b>{point.y}</b></td></tr>',
+      footerFormat: '</table>',
+      shared: true,
+      useHTML: true
+   };
+   var plotOptions = {
+      column: {
+         pointPadding: 0.2,
+         borderWidth: 0
+      }
+   };
+   var credits = {
+      enabled: false
+   };
+
+   var series= [{
+        //     name: 'Number of businesses created',
+        //     data: [17347, 1013, 517, 298, 112, 105, 81, 111, 185, 213, 126, 982]
+        // }, {
+            name: 'Number of jobs created',
+            data: [48863, 28140, 28292, 30899, 19210, 22636, 10471, 13733, 18844, 10095, 8978, 106969]
+   }];
+
+   var json = {};
+   json.chart = chart;
+   json.title = title;
+   json.subtitle = subtitle;
+   json.tooltip = tooltip;
+   json.xAxis = xAxis;
+   json.yAxis = yAxis;
+   json.series = series;
+   json.plotOptions = plotOptions;
+   json.credits = credits;
+   $('#highcharts5').highcharts(json);
+
+    });
