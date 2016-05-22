@@ -147,6 +147,8 @@
   <%= image_tag 'Technology.jpg', :class => "chapter"%>
 </div>
 </div>
+
+<section class="checkout-section">
 <div class="pub-description">
   <h4>Purchase Your Access Today</h4>
 </div>
@@ -155,16 +157,16 @@
     <i class="fa fa-users purchase fa-3x" aria-hidden="true"></i>
   </div>
   <div class="col s4">
-    <h5>The Right People</h5>
-    <p>Exclusive interviews with top CEOs, politicians and cultural icons.</p>
+    <h5><span class="red-font">The Right People</span></h5>
+    <p><span class="white-font">Exclusive interviews with top CEOs, politicians and cultural icons.</p>
 
   </div>
   <div class="col s1 offset-s1">
     <i class="fa fa-line-chart purchase fa-3x" aria-hidden="true"></i>
   </div>
   <div class="col s4">
-    <h5>High Impact Analysis</h5>
-    <p>Hard-hitting analysis of the leading challenges facing the market.</p>
+    <h5><span class="red-font">High Impact Analysis</span></h5>
+    <p><span class="white-font">Hard-hitting analysis of the leading challenges facing the market.</span></p>
   </div>
 </div>
 <div class="row">
@@ -172,116 +174,122 @@
     <i class="fa fa-industry purchase fa-3x" aria-hidden="true"></i>
   </div>
   <div class="col s4">
-    <h5>The Right Industries.</h5>
-    <p>In-depth coverage on real estate, finance, trade, technology and a dozen other key sectors.</p>
+    <h5 class="red-font">The Right Industries</h5>
+    <p><span class="white-font">In-depth coverage on real estate, finance, trade, technology and a dozen other key sectors.</span></p>
   </div>
   <div class="col s1 offset-s1">
     <i class="fa fa-eye purchase fa-3x" aria-hidden="true"></i>
   </div>
   <div class="col s4">
-    <h5>The Top Opportunities</h5>
-    <p>Emerging opportunities for investors and innovators</p>
+    <h5 class="red-font">The Top Opportunities</h5>
+    <p class="white-font">Emerging opportunities for investors and innovators</p>
   </div>
 </div>
-
+</section>
 
 <!-- Checkout section -->
+<section>
+  <div class="row">
+    <div class="col s2 offset-s2 buy-box" >
+      <h5> By Chapter </h5>
+      <%= form_tag charges_path do %>
+        <article>
+          <% if flash[:error].present? %>
+            <div id="error_explanation">
+              <p><%= flash[:error] %></p>
+            </div>
+          <% end %>
+          <label class="amount">
+            <span>Amount: $17.00</span>
+          </label>
+        </article>
 
-<div class="row">
-  <div class="col s2 offset-s2 buy-box" >
-    <h5> By Chapter </h5>
-    <%= form_tag charges_path do %>
-      <article>
-        <% if flash[:error].present? %>
-          <div id="error_explanation">
-            <p><%= flash[:error] %></p>
-          </div>
-        <% end %>
-        <label class="amount">
-          <span>Amount: $17.00</span>
-        </label>
-      </article>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-description="Purchase a Chapter"
+                data-amount="1700"
+                data-locale="auto"
+                data-label="Buy now"></script>
+      <% end %>
 
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-description="A month's subscription"
-              data-amount="1700"
-              data-locale="auto"></script>
-    <% end %>
+    </div>
+    <div class="col s2  buy-box" style="margin-left: 15px;">
+      <h5> Digital Only </h5>
+      <%= form_tag charges_path do %>
+        <article>
+          <% if flash[:error].present? %>
+            <div id="error_explanation">
+              <p><%= flash[:error] %></p>
+            </div>
+          <% end %>
+          <label class="amount">
+            <span>Amount: $129.00</span>
+          </label>
+        </article>
+
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-description="Digital Only"
+                data-amount="12900"
+                data-locale="auto"
+                data-label="Buy now"></script>
+      <% end %>
+
+
+    </div>
+    <div class="col s2 buy-box" style="margin-left: 15px;">
+      <h5> Print Only </h5>
+      <%= form_tag charges_path do %>
+        <article>
+          <% if flash[:error].present? %>
+            <div id="error_explanation">
+              <p><%= flash[:error] %></p>
+            </div>
+          <% end %>
+          <label class="amount">
+            <span>Amount: $199.00</span>
+          </label>
+        </article>
+
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-description="Print Only"
+                data-amount="19900"
+                data-locale="auto"
+                data-shipping-address="true"
+                data-label="Buy now"></script>
+      <% end %>
+
+
+    </div>
+    <div class="col s2 buy-box" style="margin-left: 15px;">
+      <%= form_tag charges_path do %>
+      <h5> Digital + Print </h5>
+        <article>
+          <% if flash[:error].present? %>
+            <div id="error_explanation">
+              <p><%= flash[:error] %></p>
+            </div>
+          <% end %>
+          <label class="amount">
+            <span>Amount: $254.00</span>
+          </label>
+        </article>
+
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-description="Print + Digital"
+                data-amount="25400"
+                data-locale="auto"
+                data-shipping-address="true"
+                data-label="Buy now"></script>
+      <% end %>
+
+
+    </div>
 
   </div>
-  <div class="col s2  buy-box" style="margin-left: 15px;">
-    <h5> Digital Only </h5>
-    <%= form_tag charges_path do %>
-      <article>
-        <% if flash[:error].present? %>
-          <div id="error_explanation">
-            <p><%= flash[:error] %></p>
-          </div>
-        <% end %>
-        <label class="amount">
-          <span>Amount: $129.00</span>
-        </label>
-      </article>
-
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-description="A month's subscription"
-              data-amount="12900"
-              data-locale="auto"></script>
-    <% end %>
-
-
-  </div>
-  <div class="col s2 buy-box" style="margin-left: 15px;">
-    <h5> Print Only </h5>
-    <%= form_tag charges_path do %>
-      <article>
-        <% if flash[:error].present? %>
-          <div id="error_explanation">
-            <p><%= flash[:error] %></p>
-          </div>
-        <% end %>
-        <label class="amount">
-          <span>Amount: $199.00</span>
-        </label>
-      </article>
-
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-description="A month's subscription"
-              data-amount="19900"
-              data-locale="auto"></script>
-    <% end %>
-
-
-  </div>
-  <div class="col s2 buy-box" style="margin-left: 15px;">
-    <%= form_tag charges_path do %>
-    <h5> Digital + Print </h5>
-      <article>
-        <% if flash[:error].present? %>
-          <div id="error_explanation">
-            <p><%= flash[:error] %></p>
-          </div>
-        <% end %>
-        <label class="amount">
-          <span>Amount: $254.00</span>
-        </label>
-      </article>
-
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-description="Print + Digital"
-              data-amount="25400"
-              data-locale="auto"></script>
-    <% end %>
-
-
-  </div>
-
-</div>
-
+</section>
 
 <div id="recent_posts">
   <h3>Recent Invest Miami Posts</h3>
