@@ -380,7 +380,6 @@ i{
    background-color: #d82928;
    color: white;
    height: 80px;
-   margin-bottom: 50px;
  }
 
  .tagline{
@@ -394,17 +393,6 @@ i{
 
  .purchase{
    color: #d82928;
-
- }
-
- .buy-box{
-   border-style: solid;
- }
-
- .buy-box1{
-   margin-left: 30px;
-   border-style: solid;
-
  }
 
  .tweets-header{
@@ -424,3 +412,7 @@ i{
    background-image: url("avatar_all.png");
    background-color: black;
  }
+
+.checkout-section{
+    background-color: #212121;
+}
