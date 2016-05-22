@@ -4,6 +4,7 @@ class FeedEntry < ActiveRecord::Base
     feed.entries.each do |entry|
       unless exists? :guid => entry.id
         create!(
+        entry.map { |x| Nokogiri::XML(x.content).css('img').first['src'] },
         :name           => entry.title,
         :summary        => entry.summary,
         :url            => entry.url,
