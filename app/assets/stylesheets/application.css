@@ -34,6 +34,9 @@ nav{
   z-index: 5;
 
 }
+.material-icons{
+  color: black;
+}
 
  nav ul a{
    color: black;
@@ -365,12 +368,44 @@ i{
 
  }
 
+ .pub-intro{
+
+ }
+
+ .mag-covers{
+   width: 70%;
+ }
+
+ .pub-description{
+   background-color: #d82928;
+   color: white;
+   height: 80px;
+ }
+
+ .tagline{
+   margin-top: 90px;
+   color: #d82928;
+ }
+
+ .chapter{
+   width: 18%;
+ }
+
+ .purchase{
+   color: #d82928;
+ }
+
  .tweets-header{
    text-align: center;
    color: white;
    padding-top: 50px;
    margin-bottom: 50px;
    /*margin-bottom: 30px;*/
+ }
+
+ .rss-feed{
+   margin-top: 60px;
+   margin-bottom: 50px;
  }
 
  .twitter-feed{
