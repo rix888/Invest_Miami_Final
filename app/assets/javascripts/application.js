@@ -326,5 +326,157 @@ $(document).ready(function() {
 
     });
 
+    //highchart 7
+
+    $(document).ready(function() {
+       var chart = {
+          type: 'column'
+       };
+       var title = {
+          text: 'Miami-Dade County, Florida 2014 County Health Profile'
+       };
+       var subtitle = {
+          text: 'Social & Mental Health'
+       };
+       var xAxis = {
+          categories: ['Total Licensed Dentists (Fiscal Year)',
+                        'Total Licensed Physicians (Fiscal Year)',
+                        'Total Licensed Family Practice Physicians (Fiscal Year)',
+                        'Total Licensed Internists (Fiscal Year)',
+                        'Total Licensed OB/GYN (Fiscal Year)',
+                        'Total Licensed Pediatricians (Fiscal Year)',
+                        'Total Hospital Beds',
+                        'Total Acute Care Beds',
+                        'Total Specialty Beds',
+                        'Total Nursing Home Beds',
+                        'County Public Health Department Full-Time Employees'],
+          crosshair: true
+       };
+       var yAxis = {
+          min: 0,
+          title: {
+             text: 'Rate Per 100,000'
+          }
+       };
+       var tooltip = {
+          headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+          pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+             '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+          footerFormat: '</table>',
+          shared: true,
+          useHTML: true
+       };
+       var plotOptions = {
+          column: {
+             pointPadding: 0.2,
+             borderWidth: 0
+          }
+       };
+       var credits = {
+          enabled: false
+       };
+
+       var series= [{
+            name: 'County',
+                data: [66.1, 299.1, 13.5, 53.0, 9.4, 24.9, 352.6, 286.5, 66.1, 325.2, 28.0, ]
+            }, {
+                name: 'State',
+                data: [59.5, 259.3, 19.1, 49.6, 10.2, 18.7, 317.3, 260.3, 57.0, 426.7, 51.1]
+
+       }];
+
+       var json = {};
+       json.chart = chart;
+       json.title = title;
+       json.subtitle = subtitle;
+       json.tooltip = tooltip;
+       json.xAxis = xAxis;
+       json.yAxis = yAxis;
+       json.series = series;
+       json.plotOptions = plotOptions;
+       json.credits = credits;
+       $('#highcharts7').highcharts(json);
+
+    });
+    //end of highchart 7
+
+
+
     // Invest Miami Tweeter feed
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+// highcharts6
+    $(document).ready(function() {
+       var chart = {
+          type: 'bar'
+       };
+       var title = {
+          text: 'Percentage of insured individuals in Miami MSA (2013 - 2014)'
+       };
+       var subtitle = {
+          text: 'Source: US Census Bureau'
+       };
+       var xAxis = {
+          categories: ['Covered by Public Health Insurance', 'Covered by Private Health Insurance', 'Insured'],
+          title: {
+             text: null
+          }
+       };
+       var yAxis = {
+          min: 0,
+          title: {
+             text: 'Percentage of the Miami MSA population',
+             align: 'high'
+          },
+          labels: {
+             overflow: 'justify'
+          }
+       };
+       var tooltip = {
+          valueSuffix: ' %'
+       };
+       var plotOptions = {
+          bar: {
+             dataLabels: {
+                enabled: true
+             }
+          }
+       };
+       var legend = {
+          layout: 'vertical',
+          align: 'right',
+          verticalAlign: 'top',
+          x: -40,
+          y: 100,
+          floating: true,
+          borderWidth: 1,
+          backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+          shadow: true
+       };
+       var credits = {
+          enabled: false
+       };
+
+       var series= [{
+             name: '2013',
+                data: [31.9, 50.5, 75.2]
+            }, {
+                name: '2014',
+                data: [33.1, 54.7, 80.4]
+            }
+       ];
+
+       var json = {};
+       json.chart = chart;
+       json.title = title;
+       json.subtitle = subtitle;
+       json.tooltip = tooltip;
+       json.xAxis = xAxis;
+       json.yAxis = yAxis;
+       json.series = series;
+       json.plotOptions = plotOptions;
+       json.legend = legend;
+       json.credits = credits;
+       $('#highcharts6').highcharts(json);
+
+    });
