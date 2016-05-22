@@ -18,7 +18,7 @@ class FeedEntry < ActiveRecord::Base
 
 
   def self.realEstateFeed
-    url = "http://www.capitalanalyticsassociates.com/category-real-estate/feed/"
+    url = "http://www.investdoral.com/category/real-estate/feed/"
     feed_url = url
     feed = Feedjira::Feed.fetch_and_parse(feed_url)
     feed.entries.each do |entry|
