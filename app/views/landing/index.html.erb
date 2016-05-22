@@ -113,6 +113,7 @@
   <ul>
     <% for entry in FeedEntry.all %>
     <li><%= link_to entry.name, entry.url %>
+      <%= image_tag
     </li>
     <% end %>
   </ul>
