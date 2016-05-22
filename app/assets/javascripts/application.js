@@ -19,7 +19,10 @@
 
 $( document ).ready(function(){
    $(".button-collapse").sideNav();
-   $(".dropdown-button").dropdown();
+   $(".dropdown-button").dropdown({
+     hover: true,
+   }
+   );
 })
 
 $(document).ready(function(){
@@ -481,6 +484,7 @@ $(document).ready(function() {
 
     });
 
+<<<<<<< HEAD
 // highchart 8
 $(document).ready(function() {
    var title = {
@@ -534,13 +538,81 @@ $(document).ready(function() {
 
    var json = {};
 
+=======
+
+
+
+
+//highcharts 8
+$(document).ready(function() {
+   var chart = {
+      type: 'area'
+   };
+   var title = {
+      text: 'Healthcare Sector Contribution to the Miami GDP'
+   };
+   var subtitle = {
+      text: 'Bureau of Economic Analysis'
+   };
+   var xAxis = {
+      categories: ['2009', '2010', '2011', '2012', '2103'],
+      tickmarkPlacement: 'on',
+      title: {
+         enabled: false
+      }
+   };
+   var yAxis = {
+      title: {
+         text: 'Millions of Chained Dollars'
+      },
+      labels: {
+         formatter: function () {
+            return this.value / 1000;
+         }
+      }
+   };
+   var tooltip = {
+      shared: true,
+      valueSuffix: ' millions'
+   };
+   var plotOptions = {
+      area: {
+         stacking: 'normal',
+         lineColor: '#666666',
+         lineWidth: 1,
+         marker: {
+            lineWidth: 1,
+            lineColor: '#666666'
+         }
+      }
+   };
+   var credits = {
+      enabled: false
+   };
+   var series= [{
+       name: 'Miami',
+            data: [10619, 10567, 10783, 11237 ,11487]
+        }
+   ];
+
+   var json = {};
+   json.chart = chart;
+
    json.title = title;
    json.subtitle = subtitle;
    json.xAxis = xAxis;
    json.yAxis = yAxis;
    json.tooltip = tooltip;
+
    json.legend = legend;
    json.series = series;
 
    $('#highcharts8').highcharts(json);
+
+   json.plotOptions = plotOptions;
+   json.credits = credits;
+   json.series = series;
+   $('#highcharts8').highcharts(json);
+
+
 });

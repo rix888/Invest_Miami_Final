@@ -32,7 +32,11 @@
 </div>
 
 
-<h4>WHY <span class="red-font">MIAMI</span></h4>
+<h4>WHY <span class="red-font">MIAMI</h4>
+<p>Miami is a growing market in a vast number of industries. Over the last few years,
+  the Gross Domestic Product of the Miami metropolitan statistical area has exceeded
+  the national average. Job creation continues to increase, especially in small business
+  start-ups.</p>
 
 <!-- <div id="highcharts1" style="height: 300px"></div> -->
 
@@ -204,15 +208,13 @@
             <span>Amount: $17.00</span>
           </label>
         </article>
-
         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                 data-description="Purchase a Chapter"
                 data-amount="1700"
                 data-locale="auto"
                 data-label="Buy now"></script>
-      <% end %>
-
+              <% end %>
     </div>
     <div class="col s2  buy-box" style="margin-left: 15px;">
       <h5> Digital Only </h5>
@@ -236,31 +238,7 @@
                 data-label="Buy now"></script>
       <% end %>
 
-
-<div class="row">
-  <div class="col s2 offset-s2 buy-box" >
-    <h5> By Chapter </h5>
-    <%= form_tag charges_path do %>
-      <article>
-        <% if flash[:error].present? %>
-          <div id="error_explanation">
-            <p><%= flash[:error] %></p>
-          </div>
-        <% end %>
-        <label class="amount">
-          <span>Amount: $17.00</span>
-        </label>
-      </article>
-
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-description="A month's subscription"
-              data-amount="1700"
-              data-locale="auto"></script>
-    <% end %>
-
-
-    </div>
+</div>
     <div class="col s2 buy-box" style="margin-left: 15px;">
       <h5> Print Only </h5>
       <%= form_tag charges_path do %>
@@ -283,8 +261,6 @@
                 data-shipping-address="true"
                 data-label="Buy now"></script>
       <% end %>
-
-
     </div>
     <div class="col s2 buy-box" style="margin-left: 15px;">
       <%= form_tag charges_path do %>
@@ -308,10 +284,7 @@
                 data-shipping-address="true"
                 data-label="Buy now"></script>
       <% end %>
-
-
     </div>
-
   </div>
 </section>
 
@@ -359,16 +332,18 @@
     <div class="row">
         <div class="col l12 center-align">
             <div class=""></div>
-            <h3>Testimonials from Political and Business Leaders</h3>
+            <h3>Testimonials from <span class="red-font">Political</span> and <span class="red-font">Business</span> Leaders</h3>
             <p>How state initiatives are bringing new jobs and diverse investments to Miami-Dade.</p>
         </div>
     </div>
     <div class="row features-block">
         <div class="col s12 l4">
             <div class="bubble">
-              "We’ve been able to add 1.25 million jobs in the first five years of the initiative, including 18,000
-              new jobs in Miami-Dade from Nov 2014 to Nov 2015, bringing the county unemployment rate to 5.8 percent."
-            </div>
+              <blockquote class="rectangle-speech-border">
+              <p class="speech">
+              "We’ve been able to add 1.25 million jobs in the first five years of the initiative, including 18,000 new jobs in Miami-Dade from Nov 2014 to Nov 2015, bringing the county unemployment rate to 5.8 percent."</p>
+            </blockquote>
+              </div>
             <div class="comments-avatar">
                 <a href="" class="pull-left">
                     <img alt="image" src="<%= image_path('avatar_rs.png') %>">
@@ -384,11 +359,10 @@
 
         <div class="col s12 l4">
             <div class="bubble">
-              "Every day, we continue to invest in making Miami-Dade County a world-class community for our residents to live, work and play. "
-              <br>
-              <br>
-              <br>
-              <br>
+              <blockquote class="rectangle-speech-border">
+              <p class="speech">
+              "Every day, we continue to invest in making Miami-Dade County a world-class community for our residents to live, work and play."</p>
+            </blockquote>
             </div>
             <div class="comments-avatar">
                 <a href="" class="pull-left">
@@ -405,8 +379,10 @@
 
         <div class="col s12 l4">
             <div class="bubble">
-              "Global changes impact Miami’s economy as much or more than any other U.S. community.
-              Miami-Dade continues to be a gateway for investment to the U.S. and the region."
+              <blockquote class="rectangle-speech-border">
+            <p class="speech">
+              "Global changes impact Miami’s economy as much or more than any other U.S. community. Miami-Dade continues to be a gateway for investment to the U.S. and the region."</p>
+            </blockquote>
             </div>
             <br>
             <div class="comments-avatar">

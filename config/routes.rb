@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'health' => 'industries#health'
   get 'realestate' => 'industries#realestate'
   get 'business_directory' => 'industries#business_directory'
+  get 'events' => 'landing#events'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

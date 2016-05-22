@@ -1,8 +1,20 @@
-<ul id="dropdown1" class="dropdown-content">
-  <li><%= link_to health_path do%>Health<% end %></li>
-  <li><%= link_to realestate_path do%>Real Estate<% end %></li>
-  <li class="divider"></li>
-  <li><a href="#!">three</a></li>
+<ul id="dropdown1" class="dropdown-content" >
+  <div class="row">
+    <div class="col s1">
+    <li><%= link_to health_path do%>Health<% end %></li>
+    <li><%= link_to realestate_path do%>Real Estate<% end %></li>
+    <li><%= link_to realestate_path do%>Education<% end %></li>
+    <li><%= link_to realestate_path do%>Tourism<% end %></li>
+    <li><%= link_to realestate_path do%>Retail<% end %></li>
+  </div>
+  <div class="col s1 offset-s4">
+    <li><%= link_to realestate_path do%>Transportation<% end %></li>
+    <li><%= link_to realestate_path do%>Environment<% end %></li>
+    <li><%= link_to realestate_path do%>Technology<% end %></li>
+    <li><%= link_to realestate_path do%>Banking<% end %></li>
+    <li><%= link_to realestate_path do%>Legal<% end %></li>
+  </div>
+  </div>
 </ul>
 
 <nav>
@@ -10,9 +22,9 @@
     <%= link_to root_path, :class => "brand-logo" do%><%= image_tag("Logo-Invest.png") %> <% end %>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
-      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Industries<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a class="dropdown-button" href="#!" data-constrainwidth="false" data-hover="true" data-activates="dropdown1">Industries<i class="material-icons right">arrow_drop_down</i></a></li>
       <li><%= link_to business_directory_path do%>Business Directory<% end %></li>
-      <li><a href="mobile.html">Events</a></li>
+      <li><%= link_to events_path do%>Events<% end %></li>
     </ul>
     <ul class="side-nav" id="mobile-demo">
       <li><a href="sass.html">Sass</a></li>
