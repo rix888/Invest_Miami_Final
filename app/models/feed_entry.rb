@@ -36,7 +36,7 @@ class FeedEntry < ActiveRecord::Base
 
 
   def self.healthFeed
-    url = "http://www.capitalanalyticsassociates.com/category-health/feed/"
+    url = "http://www.investdoral.com/category/real-estate/feed/"
     feed_url = url
     feed = Feedjira::Feed.fetch_and_parse(feed_url)
     feed.entries.each do |entry|
