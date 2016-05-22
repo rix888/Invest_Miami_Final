@@ -404,3 +404,79 @@ $(document).ready(function() {
 
     // Invest Miami Tweeter feed
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+// highcharts6
+    $(document).ready(function() {
+       var chart = {
+          type: 'bar'
+       };
+       var title = {
+          text: 'Percentage of insured individuals in Miami MSA (2013 - 2014)'
+       };
+       var subtitle = {
+          text: 'Source: US Census Bureau'
+       };
+       var xAxis = {
+          categories: ['Covered by Public Health Insurance', 'Covered by Private Health Insurance', 'Insured'],
+          title: {
+             text: null
+          }
+       };
+       var yAxis = {
+          min: 0,
+          title: {
+             text: 'Percentage of the Miami MSA population',
+             align: 'high'
+          },
+          labels: {
+             overflow: 'justify'
+          }
+       };
+       var tooltip = {
+          valueSuffix: ' %'
+       };
+       var plotOptions = {
+          bar: {
+             dataLabels: {
+                enabled: true
+             }
+          }
+       };
+       var legend = {
+          layout: 'vertical',
+          align: 'right',
+          verticalAlign: 'top',
+          x: -40,
+          y: 100,
+          floating: true,
+          borderWidth: 1,
+          backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+          shadow: true
+       };
+       var credits = {
+          enabled: false
+       };
+
+       var series= [{
+             name: '2013',
+                data: [31.9, 50.5, 75.2]
+            }, {
+                name: '2014',
+                data: [33.1, 54.7, 80.4]
+            }
+       ];
+
+       var json = {};
+       json.chart = chart;
+       json.title = title;
+       json.subtitle = subtitle;
+       json.tooltip = tooltip;
+       json.xAxis = xAxis;
+       json.yAxis = yAxis;
+       json.series = series;
+       json.plotOptions = plotOptions;
+       json.legend = legend;
+       json.credits = credits;
+       $('#highcharts6').highcharts(json);
+
+    });
