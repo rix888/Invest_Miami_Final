@@ -98,6 +98,84 @@
 </ul>
 </section>
 
+<section class="pub-intro">
+  <div class="row">
+    <div class="col s4 offset-s4">
+      <%= image_tag 'Logo-Invest.png'%>
+    </div>
+  </div>
+  <h4>Tap Into The <span class="red-font">Top 200 Miami Business Minds</span> With Just <span class="red-font">One Publication</span></h4>
+  <div class="row">
+    <div class="col s5 offset-s1">
+      <%= image_tag 'covers.jpg', :class => "mag-covers"%>
+    </div>
+    <div class="col s5 offset-s1">
+      <h5 class="tagline">THE RIGHT PEOPLE. THE RIGHT INDUSTRIES. RIGHT NOW.</h5>
+    </div>
+  </div>
+
+</section>
+  <div class="pub-description">
+    <h4>Includes 15 High Impact Chapters</h4>
+  </div>
+  <div class="row">
+    <div class="col s10 offset-s1">
+  <%= image_tag 'Accounting.jpg', :class => "chapter"%>
+  <%= image_tag 'Bankin-Finance.jpg', :class => "chapter"%>
+  <%= image_tag 'Construction.jpg', :class => "chapter"%>
+  <%= image_tag 'Economy.jpg', :class => "chapter"%>
+  <%= image_tag 'Education.jpg', :class => "chapter"%>
+</div>
+</div>
+<div class="row">
+    <div class="col s10 offset-s1">
+  <%= image_tag 'Entertainment.jpg', :class => "chapter"%>
+  <%= image_tag 'Health.jpg', :class => "chapter"%>
+  <%= image_tag 'Retail.jpg', :class => "chapter"%>
+  <%= image_tag 'Sports.jpg', :class => "chapter"%>
+  <%= image_tag 'Transportation.jpg', :class => "chapter"%>
+</div>
+</div>
+  <div class="row">
+      <div class="col s10 offset-s1">
+  <%= image_tag 'Legal.jpg', :class => "chapter"%>
+  <%= image_tag 'Real-Estate.jpg', :class => "chapter"%>
+  <%= image_tag 'Trade-Logistics.jpg', :class => "chapter"%>
+  <%= image_tag 'Tourism.jpg', :class => "chapter"%>
+  <%= image_tag 'Technology.jpg', :class => "chapter"%>
+</div>
+</div>
+<div class="pub-description">
+  <h4>Purchase Your Access Today</h4>
+</div>
+<div class="row">
+  <div class="col s1 offset-s1">
+    <i class="fa fa-users purchase" aria-hidden="true"></i>
+  </div>
+  <div class="col s4">
+    <h5>The Right People</h5>
+    <p>Exclusive interviews with top CEOs, politicians and cultural icons.</p>
+
+  </div>
+  <div class="col s4 offset-s1">
+    <i class="fa fa-line-chart purchase" aria-hidden="true"></i>
+    <h5>High Impact Analysis</h5>
+    <p>Hard-hitting analysis of the leading challenges facing the market.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col s4 offset-s1">
+    <i class="fa fa-industry purchase" aria-hidden="true"></i>
+    <h5>The Right Industries.</h5>
+    <p>In-depth coverage on real estate, finance, trade, technology and a dozen other key sectors.</p>
+  </div>
+  <div class="col s4 offset-s1">
+    <i class="fa fa-eye purchase" aria-hidden="true"></i>
+    <h5>The Top Opportunities</h5>
+    <p>Emerging opportunities for investors and innovators</p>
+  </div>
+</div>
+
 
 <!-- section to buy the magazine -->
 
@@ -110,13 +188,17 @@
 
 <div id="recent_posts">
   <h3>Recent Invest Miami Posts</h3>
-  <ul>
-    <% for entry in FeedEntry.all %>
-    <li><%= link_to entry.name, entry.url %>
-      <%= image_tag
-    </li>
-    <% end %>
-  </ul>
+  <div class ="row">
+    <ul>
+      <% for entry in FeedEntry.all %>
+        <div class="col s4 rss-feed">
+          <li><%#= image_tag entry.content %></li>
+          <li><%= link_to entry.name, entry.url %></li>
+          <li><%= sanitize entry.summary %></li>
+        </div>
+      <% end %>
+    </ul>
+  </div>
 </div>
 
 
