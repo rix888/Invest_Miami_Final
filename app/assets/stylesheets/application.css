@@ -49,6 +49,15 @@ nav{
 .red-font{
   color: #d82928;
 }
+
+i{
+  color: white;
+}
+
+.white-font{
+  color: white;
+}
+
 .chart-container{
   background-color: #F2F2F2;
 }
@@ -59,6 +68,11 @@ nav{
  /* ================ The Timeline ================ */
 .process{
   background-color: #212121;
+}
+
+.process-footer{
+  background-color: #212121;
+  text-align: center;
 }
 
 .heavyLiftingTitle{

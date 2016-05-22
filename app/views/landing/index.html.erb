@@ -113,7 +113,6 @@
   <ul>
     <% for entry in FeedEntry.all %>
     <li><%= link_to entry.name, entry.url %>
-      <p><%#= entry.summary %>
     </li>
     <% end %>
   </ul>
@@ -205,48 +204,28 @@
 
 
 <!-- contact us section -->
-<div class="contact-us">
-    <div>
-        <div>
-            <div></div>
-            <h1>Contact Us</h1>
-            <p>THE RIGHT PEOPLE. THE RIGHT INDUSTRIES. RIGHT NOW.</p>
+
+<footer class="process-footer">
+  <div class="container">
+    <!-- <h4><span class="white-font">Contact Us</span></h4> -->
+    <div class="row">
+      <div class="col l6 s12">
+        <p><span class="white-font">THE RIGHT PEOPLE.</span> <span class="red-font">THE RIGHT INDUSTRIES.</span><span class="white-font"> RIGHT NOW.</span></p>
+      </div>
+      <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Follow Us</h5>
+          <a href="https://www.linkedin.com/company/capital-analytics-associates"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/Invest_Miami"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/capitalanalyticsassociates/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+          <a href="https://www.youtube.com/channel/UC4pxI9TxPRyoxcrY7fItF5w"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
         </div>
+      </div>
     </div>
-    <div>
-        <div>
-            <address>
-                <strong><span>Invest: Miami</span></strong><br/>
-                <abbr>P:</abbr> +1 (786) 322-8330
-            </address>
-        </div>
-        <div>
-            <p>
-                Capital Analytics Associates is a dynamic media company that serves the needs of businesses, executives, investors and entrepreneurs through forging strategic connections and producing engaging, relevant and high-impact content. It specializes in producing comprehensive annual economic reviews that provides its elite network of global business leaders with the key information they need to make smart investment decisions.
-            </p>
-        </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    <span class="white-font">© 2016 Copyright Text</span>
     </div>
-    <div>
-        <div>
-            <a href="mailto:contact@capitalaa.com" class="btn btn-danger">Send us mail</a>
-            <p>
-                Or follow us on social platform
-            </p>
-            <ul>
-                <li><a href="https://www.linkedin.com/company/capital-analytics-associates"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                </li>
-                <li><a href="https://twitter.com/Invest_Miami"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-                </li>
-                <li><a href="https://www.facebook.com/capitalanalyticsassociates/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                </li>
-                <li><a href="https://www.youtube.com/channel/UC4pxI9TxPRyoxcrY7fItF5w"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div>
-        <div>
-            <p><strong>&copy; 2016 Invest: Miami</strong><br/>THE RIGHT PEOPLE. THE RIGHT INDUSTRIES. RIGHT NOW.</p>
-        </div>
-    </div>
-</div>
+  </div>
+</footer>
