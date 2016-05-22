@@ -480,3 +480,67 @@ $(document).ready(function() {
        $('#highcharts6').highcharts(json);
 
     });
+
+// highchart 8
+$(document).ready(function() {
+   var title = {
+      text: 'Real Estate Charts Miami, Florida'
+   };
+   var subtitle = {
+      text: 'Miami, Florida Metropolitan Area House, Prices'
+   };
+   var xAxis = {
+      categories: ['1986', '1987',  '1988', '1989', '1990', '1991',
+'1992', '1993', '1994', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008',
+'2009', '2010', '2011','2012', '2012', '2012', '2012', '2012', '2012', '2012', '2012', '2012', '2012','2012','2013', '2014']
+   };
+   var yAxis = {
+      title: {
+         text: 'Price'
+      },
+      plotLines: [{
+         value: 0,
+         width: 1,
+         color: '#808080'
+      }]
+   };
+
+   var tooltip = {
+      valueSuffix: '\xB0C'
+   }
+
+   var legend = {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'middle',
+      borderWidth: 0
+   };
+
+   var series =  [
+      {
+         name: 'Nominal Median',
+         data: [99604, 103834, 111280, 115133, 113786, 113728, 115770, 122042,
+          125505, 126649, 127388, 131647, 136470, 145162, 160444, 181159, 210710,
+         241405, 303723, 393549, 404775, 316861, 223414, 213694, 200541, 202120, 223037, 258672]
+      },
+      {
+         name: 'Real House Price',
+         data: [202843, 203610, 209959, 207437, 194873, 190731, 189235, 195545,
+           196221, 193318, 188972, 192424, 196512, 203401, 216902, 241916, 273999,
+           307652, 376628, 469271, 473014, 354450, 250098, 233114, 215131, 210512, 228593, 261054]
+      },
+
+   ];
+
+   var json = {};
+
+   json.title = title;
+   json.subtitle = subtitle;
+   json.xAxis = xAxis;
+   json.yAxis = yAxis;
+   json.tooltip = tooltip;
+   json.legend = legend;
+   json.series = series;
+
+   $('#highcharts8').highcharts(json);
+});
