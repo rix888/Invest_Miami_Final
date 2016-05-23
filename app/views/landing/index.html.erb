@@ -304,7 +304,7 @@
   <h3>Recent Invest Miami Posts</h3>
   <div class ="row">
     <ul>
-      <% for entry in FeedEntry.all %>
+      <% for entry in FeedEntry.limit(6) %>
         <div class="col s4 rss-feed">
           <li><%#= image_tag entry.content %></li>
           <li><%= link_to entry.name, entry.url %></li>
