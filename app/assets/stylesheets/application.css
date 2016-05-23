@@ -368,9 +368,14 @@ i{
 
  }
 
-
+ .section-title{
+   padding-top: 20px;
+ }
  .pub-intro{
 
+ }
+ .bottom-point{
+   padding-bottom: 50px;
  }
 
  .mag-covers{
@@ -394,6 +399,29 @@ i{
 
  .purchase{
    color: #d82928;
+ }
+
+ .buy-box{
+   border-style: solid;
+   background-color: #212121;
+   border-radius: 10px;
+ }
+
+ .buy-title{
+   color: white;
+   text-align: center;
+ }
+ .amount{
+   color: white;
+   font-size: 1.5em;
+   text-align: center;
+   padding: 45px 0 ;
+ }
+ .stripe-button-el{
+   margin-left: 50px;
+   background: red;
+   background-image: linear-gradient(#d82928,#d82928 85%,#d82928);
+   padding-bottom: 20px;
  }
 
  .tweets-header{
@@ -485,4 +513,8 @@ i{
   width:24px;
   height:15px;
   background:#fff;
+}
+
+rect[Attributes Style]{
+  fill: red;
 }
