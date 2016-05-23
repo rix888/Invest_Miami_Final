@@ -484,7 +484,7 @@ $(document).ready(function() {
 // highchart 8
 $(document).ready(function() {
    var title = {
-      text: 'Real Estate Charts Miami, Florid'
+      text: 'Real Estate Charts Miami, Florida'
    };
    var subtitle = {
       text: 'Miami, Florida Metropolitan Area House, Prices'
