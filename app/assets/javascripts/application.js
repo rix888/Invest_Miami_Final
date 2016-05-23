@@ -544,3 +544,14 @@ $(document).ready(function() {
 
    $('#highcharts8').highcharts(json);
 });
+
+// Calendar
+
+$(document).ready(function() {
+    $('#calendar').fullCalendar({
+        googleCalendarApiKey: 'AIzaSyBCRdjpkLRAyUGBzH4OP8sTNp4pHWIkEYc',
+        events: {
+            googleCalendarId: 'investmiamitest@gmail.com'
+        }
+    });
+});

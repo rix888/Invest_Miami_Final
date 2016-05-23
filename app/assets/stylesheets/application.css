@@ -20,7 +20,7 @@
    padding: 0;
 
    color: rgb(50,50,50);
-   font-family: 'Open Sans', sans-serif;
+   font-family: 'Museo Slab';
    font-size: 112.5%;
    line-height: 1.6em;
  }
@@ -517,4 +517,8 @@ i{
 
 rect[Attributes Style]{
   fill: red;
+}
+
+#calendar {
+  margin: 70px;
 }
