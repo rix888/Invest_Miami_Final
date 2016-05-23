@@ -23,6 +23,7 @@
    font-family: 'Museo Slab';
    font-size: 112.5%;
    line-height: 1.6em;
+   /*background-image: url("palm_tree.jpg");*/
  }
 
  h4{
@@ -47,6 +48,12 @@ nav{
 
 .slider .slides li img{
   opacity: 0.4;
+}
+
+.slider {
+    /*height: 400px;*/
+    background: transparent;
+    /*margin-bottom: 0;*/
 }
 
 .red-font{

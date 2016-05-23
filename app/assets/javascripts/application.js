@@ -555,3 +555,56 @@ $(document).ready(function() {
         }
     });
 });
+
+// highcharts fade-in on scroll
+
+function showImages(el) {
+        var windowHeight = jQuery( window ).height();
+        $(el).each(function(){
+            var thisPos = $(this).offset().top;
+
+            var topOfWindow = $(window).scrollTop();
+            if (topOfWindow + windowHeight - 200 > thisPos ) {
+                $(this).addClass("fadeIn");
+            }
+        });
+    }
+
+    // if the image in the window of browser when the page is loaded, show that image
+    $(document).ready(function(){
+            showImages('.hcfn');
+    });
+
+    // if the image in the window of browser when scrolling the page, show that image
+    $(window).scroll(function() {
+            showImages('.hcfn');
+    });
+
+
+// fade out Heavy lifting, purchase your access today, twitter when you scroll-half
+$(window).on('scroll', function(){
+  var curPos = $(window).scrollTop();
+  $('body').css('background-position', '0 -' + curPos * .1 + 'px');
+  fadePanels(curPos);
+}).scroll();
+
+function fadePanels(curPos) {
+  var panels = $('.panel');
+
+  for (var i = 0; i < panels.length; i++) {
+    var offsetTop = $(panels[i]).offset().top;
+    var halfPanel = (($(panels[i]).height() + 80) / 2) // half the panel height + padding
+    var offsetHalf = halfPanel + offsetTop;
+
+    $(panels[i]).attr('data-scroll-top' , offsetTop);
+    $(panels[i]).attr('data-scroll-half', offsetHalf);
+
+    var j = (curPos - offsetHalf) / halfPanel;
+
+    if (curPos > $(panels[i]).data('scroll-half')) {
+      $(panels[i]).css('opacity', 1 - (j));
+    } else {
+      $(panels[i]).css('opacity', '1');
+    }
+  }
+}
