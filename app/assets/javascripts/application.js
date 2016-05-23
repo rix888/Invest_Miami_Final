@@ -19,10 +19,7 @@
 
 $( document ).ready(function(){
    $(".button-collapse").sideNav();
-   $(".dropdown-button").dropdown({
-     hover: true,
-   }
-   );
+   $(".dropdown-button").dropdown();
 })
 
 $(document).ready(function(){
@@ -484,72 +481,66 @@ $(document).ready(function() {
 
     });
 
-
-
-
-
-//highcharts 8
+// highchart 8
 $(document).ready(function() {
-   var chart = {
-      type: 'area'
-   };
    var title = {
-      text: 'Healthcare Sector Contribution to the Miami GDP'
+      text: 'Real Estate Charts Miami, Florid'
    };
    var subtitle = {
-      text: 'Bureau of Economic Analysis'
+      text: 'Miami, Florida Metropolitan Area House, Prices'
    };
    var xAxis = {
-      categories: ['2009', '2010', '2011', '2012', '2103'],
-      tickmarkPlacement: 'on',
-      title: {
-         enabled: false
-      }
+      categories: ['1986', '1987',  '1988', '1989', '1990', '1991',
+'1992', '1993', '1994', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008',
+'2009', '2010', '2011','2012', '2012', '2012', '2012', '2012', '2012', '2012', '2012', '2012', '2012','2012','2013', '2014']
    };
    var yAxis = {
       title: {
-         text: 'Millions of Chained Dollars'
+         text: 'Price'
       },
-      labels: {
-         formatter: function () {
-            return this.value / 1000;
-         }
-      }
+      plotLines: [{
+         value: 0,
+         width: 1,
+         color: '#808080'
+      }]
    };
+
    var tooltip = {
-      shared: true,
-      valueSuffix: ' millions'
+      valueSuffix: '\xB0C'
+   }
+
+   var legend = {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'middle',
+      borderWidth: 0
    };
-   var plotOptions = {
-      area: {
-         stacking: 'normal',
-         lineColor: '#666666',
-         lineWidth: 1,
-         marker: {
-            lineWidth: 1,
-            lineColor: '#666666'
-         }
-      }
-   };
-   var credits = {
-      enabled: false
-   };
-   var series= [{
-       name: 'Miami',
-            data: [10619, 10567, 10783, 11237 ,11487]
-        }
+
+   var series =  [
+      {
+         name: 'Nominal Median',
+         data: [99604, 103834, 111280, 115133, 113786, 113728, 115770, 122042,
+          125505, 126649, 127388, 131647, 136470, 145162, 160444, 181159, 210710,
+         241405, 303723, 393549, 404775, 316861, 223414, 213694, 200541, 202120, 223037, 258672]
+      },
+      {
+         name: 'Real House Price',
+         data: [202843, 203610, 209959, 207437, 194873, 190731, 189235, 195545,
+           196221, 193318, 188972, 192424, 196512, 203401, 216902, 241916, 273999,
+           307652, 376628, 469271, 473014, 354450, 250098, 233114, 215131, 210512, 228593, 261054]
+      },
+
    ];
 
    var json = {};
-   json.chart = chart;
+
    json.title = title;
    json.subtitle = subtitle;
    json.xAxis = xAxis;
    json.yAxis = yAxis;
    json.tooltip = tooltip;
-   json.plotOptions = plotOptions;
-   json.credits = credits;
+   json.legend = legend;
    json.series = series;
-   $('#highcharts8').highcharts(json);
 
+   $('#highcharts8').highcharts(json);
 });
