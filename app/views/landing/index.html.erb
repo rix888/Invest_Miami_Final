@@ -37,6 +37,7 @@
 
 
 <h4>WHY <span class="red-font">MIAMI</h4>
+
   <div class="row">
       <div class="grid-example col l8 push-l2">Miami is a growing market in a vast number of industries. Over the last few years,
         the Gross Domestic Product of the Miami metropolitan statistical area has exceeded
@@ -45,6 +46,12 @@
       </div>
 
     </div>
+
+
+<p class="center-text">Miami is a growing market in a vast number of industries. Over the last few years,
+  the Gross Domestic Product of the Miami metropolitan statistical area has exceeded
+  the national average. Job creation continues to increase, especially in small business
+  start-ups.</p>
 
 
 
@@ -320,9 +327,9 @@
   <div class ="row">
     <ul>
       <% for entry in FeedEntry.limit(6) %>
-        <div class="col s4 rss-feed">
-          <li><%#= image_tag entry.content %></li>
+        <div class="col m4 rss-feed">
           <li><%= link_to entry.name, entry.url %></li>
+          <li class="divider"></li>
           <li><%= sanitize entry.summary %></li>
         </div>
       <% end %>
@@ -367,7 +374,7 @@
                 </a>
                 <div class="media-body">
                     <div class="commens-name">
-                        Rick Scott
+                        <p>Rick Scott</p>
                     </div>
                     <small class="text-muted">Governor - State of Florida</small>
                 </div>
@@ -387,7 +394,7 @@
                 </a>
                 <div class="media-body">
                     <div class="commens-name">
-                        Carlos A. Gimenez
+                        <p>Carlos A. Gimenez</p>
                     </div>
                     <small class="text-muted">Mayor - Miami Dade County</small>
                 </div>
@@ -408,7 +415,7 @@
                 </a>
                 <div class="media-body">
                     <div class="commens-name">
-                        Larry K. Williams
+                        <p>Larry K. Williams</p>
                     </div>
                     <small class="text-muted">President & CEO, The Beacon Council</small>
                 </div>
@@ -424,10 +431,9 @@
 
 <footer class="process-footer">
   <div class="container">
-    <!-- <h4><span class="white-font">Contact Us</span></h4> -->
     <div class="row">
       <div class="col l6 s12">
-        <p><span class="white-font">THE RIGHT PEOPLE.</span> <span class="red-font">THE RIGHT INDUSTRIES.</span><span class="white-font"> RIGHT NOW.</span></p>
+        <p class="footer-text"><span class="white-font">THE RIGHT PEOPLE.</span> <span class="red-font">THE RIGHT INDUSTRIES.</span><span class="white-font"> RIGHT NOW.</span></p>
       </div>
       <div class="row">
       <div class="col l6 s12">

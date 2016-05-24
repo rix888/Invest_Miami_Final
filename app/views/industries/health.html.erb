@@ -1,3 +1,9 @@
+
+<h4>WHY <span class="red-font">HEALTHCARE</h4>
+  <p class="center-text">With new cutting-edge facilities under construction, Miami-Dade's health
+  sector continues on a growth trajectory. Recent macro trends have signaled expansion of health systems.
+  There has also been sustained job growth in the health services sector.</p>
+
 <div class="row">
       <div class="col s12">
         <center>
@@ -21,7 +27,6 @@
     </div>
   </div>
   </div>
-
 
 
 
@@ -54,22 +59,32 @@
 
 
 <div id="recent_posts">
-  <h3>Recent Healthcare Miami Posts</h3>
-  <ul>
-    <% for entry in FeedEntry.healthFeed %>
-    <li><%= link_to entry.title, entry.url %>
-      <p><%#= entry.summary %>
-    </li>
-    <% end %>
-  </ul>
+  <h4>Recent Invest: Miami Healthcare Posts</h4>
+  <div class ="row">
+    <ul>
+      <% for entry in FeedEntry.limit(6) %>
+        <div class="col s4 rss-feed">
+          <li><%= link_to entry.name, entry.url %></li>
+          <li class="divider"></li>
+          <li><%= sanitize entry.summary %></li>
+        </div>
+      <% end %>
+    </ul>
+  </div>
 </div>
 
 <footer class="process-footer">
   <div class="container">
+
+    <div class="row">
+      <div class="col l6 s12">
+        <p class="footer-text"><span class="white-font">THE RIGHT PEOPLE.</span> <span class="red-font">THE RIGHT INDUSTRIES.</span><span class="white-font"> RIGHT NOW.</span></p>
+
     <!-- <h4><span class="white-font">Contact Us</span></h4> -->
     <div class="row">
       <div class="col l6 s12">
         <p><span class="white-font">THE RIGHT PEOPLE.</span> <span class="red-font">THE RIGHT INDUSTRIES.</span><span class="white-font"> RIGHT NOW.</span></p>
+
       </div>
       <div class="row">
       <div class="col l6 s12">
@@ -84,7 +99,9 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
+
     <span class="white-font">© 2016 Copyright Invest:Miami</span>
+
     </div>
   </div>
 </footer>

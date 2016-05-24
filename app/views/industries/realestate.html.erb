@@ -1,3 +1,8 @@
+
+<h4>WHY <span class="red-font">REAL ESTATE</h4>
+  <p class="center-text">Rising domestic demand, steady international interest, and a stable
+  economy support Miami-Dade's diversifying real estate market.</p>
+
 <div class="row">
       <div class="col s12">
         <center>
@@ -16,13 +21,14 @@
 
       Invest: Miami hosted two VIP panels to further deepen the discussion on infrastructure and development in Miami-Dade.
       The morning infrastructure panel featured keynote Bill Johnson, Florida Secretary of Commerce and Enterprise Florida
-      President & CEO, Enterprise Florida followed by a panel discussion with Kerri Barsh, Shareholder, Greenberg Traurig,
+      President &amp; CEO, Enterprise Florida followed by a panel discussion with Kerri Barsh, Shareholder, Greenberg Traurig,
       Alice Bravo, Director, Miami-Dade County Department of Transit, MacAdam Glinn, Senior Vice-President for South Florida,
       Skanska USA, and Kevin Lynskey, Deputy Director, Port Miami.
 
     </div>
   </div>
   </div>
+
 
 
 <div class="charts-container">
@@ -66,6 +72,27 @@
 
 <div id="recent_posts">
 
+  <h4>Recent Invest:Miami Real Estate Posts</h4>
+  <div class ="row">
+    <ul>
+      <% for entry in FeedEntry.limit(6) %>
+        <div class="col s4 rss-feed">
+          <li><%= link_to entry.name, entry.url %></li>
+          <li class="divider"></li>
+          <li><%= sanitize entry.summary %></li>
+        </div>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<footer class="process-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <p class="footer-text"><span class="white-font">THE RIGHT PEOPLE.</span> <span class="red-font">THE RIGHT INDUSTRIES.</span><span class="white-font"> RIGHT NOW.</span></p>
+
+
   <h3>Recent Real Estate Invest Miami Posts</h3>
   <ul>
     <% for entry in FeedEntry.realEstateFeed %>
@@ -83,6 +110,7 @@
     <div class="row">
       <div class="col l6 s12">
         <p><span class="white-font">THE RIGHT PEOPLE.</span> <span class="red-font">THE RIGHT INDUSTRIES.</span><span class="white-font"> RIGHT NOW.</span></p>
+
       </div>
       <div class="row">
       <div class="col l6 s12">
@@ -97,7 +125,9 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
+
     <span class="white-font">© 2016 Copyright Invest:Miami</span>
+
     </div>
   </div>
 </footer>
