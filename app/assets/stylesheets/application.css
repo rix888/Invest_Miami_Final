@@ -25,6 +25,10 @@
    line-height: 1.6em;
  }
 
+ .center-text {
+   text-align: center;
+ }
+
  h4{
    text-align: center;
  }
@@ -432,10 +436,22 @@ i{
    /*margin-bottom: 30px;*/
  }
 
+ a{
+   color: #d82928;
+ }
+
  .rss-feed{
    margin-top: 60px;
    margin-bottom: 50px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: #E0E0E0;
+   border-radius: 10px;
+   height: 500px;
  }
+.stripe-button-el span {
+    background: red;
+  }
 
  .twitter-feed{
    background-image: url("avatar_all.png");
@@ -521,4 +537,26 @@ rect[Attributes Style]{
 
 #calendar {
   margin: 70px;
+}
+
+.fc-event {
+  border: 1px solid #d82928;
+  background-color: #d82928;
+  font-size: .69em;
+}
+
+.fc-toolbar h2 {
+    margin: 0;
+    color: #D82928;
+}
+nav ul a:hover{
+  background-color: transparent;
+}
+
+.dropdown-content li>a, .dropdown-content li>span{
+  color: black;
+}
+
+.footer-text {
+  margin-top: 15px;
 }

@@ -26,32 +26,10 @@ $(document).ready(function(){
   $('.slider').slider({full_width: true});
 });
 
-// highcharts1 test
-// $(function () {
-//     $('#highcharts1').highcharts({
-//         chart: {
-//             type: 'bar'
-//         },
-//         title: {
-//             text: 'Fruit Consumption'
-//         },
-//         xAxis: {
-//             categories: ['Apples', 'Bananas', 'Oranges']
-//         },
-//         yAxis: {
-//             title: {
-//                 text: 'Fruit eaten'
-//             }
-//         },
-//         series: [{
-//             name: 'Jane',
-//             data: [1, 0, 4]
-//         }, {
-//             name: 'John',
-//             data: [5, 7, 3]
-//         }],
-//     });
-// });
+$(document).ready(function (){
+    Highcharts.setOptions({
+        colors: ['#D82928', '#212121', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4']});
+    });
 
 // highcharts2
 $(document).ready(function() {
