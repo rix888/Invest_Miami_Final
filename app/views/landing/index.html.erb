@@ -145,7 +145,7 @@
 <div class="row">
     <div class="col s10 offset-s1">
   <%= image_tag 'Entertainment.jpg', :class => "chapter"%>
-  <%= image_tag 'Health.jpg', :class => "chapter"%>
+  <%= link_to health_path do %><%= image_tag 'Health.jpg', :class => "chapter"%><% end %>
   <%= image_tag 'Retail.jpg', :class => "chapter"%>
   <%= image_tag 'Sports.jpg', :class => "chapter"%>
   <%= image_tag 'Transportation.jpg', :class => "chapter"%>
@@ -154,7 +154,7 @@
   <div class="row">
       <div class="col s10 offset-s1">
   <%= image_tag 'Legal.jpg', :class => "chapter"%>
-  <%= image_tag 'Real-Estate.jpg', :class => "chapter"%>
+  <%= link_to realestate_path do %><%= image_tag 'Real-Estate.jpg', :class => "chapter"%><% end %>
   <%= image_tag 'Trade-Logistics.jpg', :class => "chapter"%>
   <%= image_tag 'Tourism.jpg', :class => "chapter"%>
   <%= image_tag 'Technology.jpg', :class => "chapter"%>
@@ -311,14 +311,14 @@
 
 
 <div id="recent_posts">
-  <h4>Recent Invest Miami Posts</h4>
+  <h4 class="rss-header">Recent Invest<span class="red-font">:Miami Posts</span></h4>
   <div class ="row">
     <ul>
       <% for entry in FeedEntry.limit(6) %>
         <div class="col m4 rss-feed">
-          <li><%= link_to entry.name, entry.url %></li>
+          <li><%= link_to entry.name, entry.url, :class => 'feed-title'%></li>
           <li class="divider"></li>
-          <li><%= sanitize entry.summary %></li>
+          <li><%= sanitize entry.summary, :class => 'feed-summary' %></li>
         </div>
       <% end %>
     </ul>

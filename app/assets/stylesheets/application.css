@@ -26,6 +26,7 @@
    /*background-image: url("palm_tree.jpg");*/
  }
 
+
  .center-text {
    text-align: center;
  }
@@ -454,7 +455,23 @@ i{
    border-width: 1px;
    border-color: #E0E0E0;
    border-radius: 10px;
-   height: 500px;
+   height: 537px;
+ }
+
+ .rss-header{
+   margin-top: 90px;
+ }
+
+ .feed-title{
+   font-weight: bold;
+   font-size: 1.1em;
+
+ }
+p{
+  padding: 8px 2px;
+}
+ .feed-summary{
+   padding-top: 10px;
  }
 .stripe-button-el span {
     background: red;

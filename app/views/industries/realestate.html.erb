@@ -77,32 +77,14 @@
     <ul>
       <% for entry in FeedEntry.limit(6) %>
         <div class="col s4 rss-feed">
-          <li><%= link_to entry.name, entry.url %></li>
+          <li><%= link_to entry.name, entry.url, :class => 'feed-title' %></li>
           <li class="divider"></li>
-          <li><%= sanitize entry.summary %></li>
+          <li><%= sanitize entry.summary, :class => 'feed-summary' %></li>
         </div>
       <% end %>
     </ul>
   </div>
 </div>
-
-<footer class="process-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <p class="footer-text"><span class="white-font">THE RIGHT PEOPLE.</span> <span class="red-font">THE RIGHT INDUSTRIES.</span><span class="white-font"> RIGHT NOW.</span></p>
-
-
-  <h3>Recent Real Estate Invest Miami Posts</h3>
-  <ul>
-    <% for entry in FeedEntry.realEstateFeed %>
-    <li><%= link_to entry.title, entry.url %>
-      <p><%#= entry.summary %>
-    </li>
-    <% end %>
-  </ul>
-</div>
-
 
 <footer class="process-footer">
   <div class="container">
@@ -125,9 +107,7 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-
     <span class="white-font">© 2016 Copyright Invest:Miami</span>
-
     </div>
   </div>
 </footer>
