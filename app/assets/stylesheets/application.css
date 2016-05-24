@@ -435,6 +435,11 @@ i{
    background-image: linear-gradient(#d82928,#d82928 85%,#d82928);
    padding-bottom: 20px;
  }
+ .stripe-button-el span{
+   background-color: red;
+   background-image: linear-gradient(rgb(255, 0, 0),rgb(255, 0, 0) 85%,rgb(255, 0, 0));
+
+ }
 
  .tweets-header{
    text-align: center;
@@ -449,7 +454,7 @@ i{
  }
 
  .rss-feed{
-   margin-top: 60px;
+   margin-top: 30px;
    margin-bottom: 50px;
    border-style: solid;
    border-width: 1px;
@@ -582,3 +587,20 @@ nav ul a:hover{
 .footer-text {
   margin-top: 15px;
 }
+
+.avatar{
+  border-radius: 70px;
+}
+.avatar-mid{
+  border-radius: 70px;
+  margin-top: 80px;
+}
+
+.payus{
+  margin-top: 70px;
+}
+
+/*.consulate{
+  margin-left: 10px;
+  padding-right: 90px;
+}*/

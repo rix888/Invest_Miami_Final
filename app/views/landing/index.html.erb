@@ -208,7 +208,7 @@
 
 <!-- Checkout section -->
 <section>
-  <div class="row">
+  <div class="row payus">
     <div class="col s2 offset-s2 buy-box" >
       <h5 class="buy-title"> By Chapter </h5>
       <%= form_tag charges_path do %>
@@ -361,9 +361,8 @@
             </blockquote>
               </div>
             <div class="comments-avatar">
-                <a href="" class="pull-left">
-                    <img alt="image" src="<%= image_path('avatar_rs.png') %>">
-                </a>
+                  <%= image_tag 'avatar_rs.png', :class => 'avatar'%>
+
                 <div class="media-body">
                     <div class="commens-name">
                         <p>Rick Scott</p>
@@ -381,9 +380,8 @@
             </blockquote>
             </div>
             <div class="comments-avatar">
-                <a href="" class="pull-left">
-                    <img alt="image" src="<%= image_path('avatar_cg.png') %>">
-                </a>
+                  <%= image_tag 'avatar_cg.png', :class => 'avatar-mid'%>
+
                 <div class="media-body">
                     <div class="commens-name">
                         <p>Carlos A. Gimenez</p>
@@ -402,14 +400,12 @@
             </div>
             <br>
             <div class="comments-avatar">
-                <a href="" class="pull-left">
-                    <img alt="image" src="<%= image_path('avatar_lw.png') %>">
-                </a>
+                  <%= image_tag 'avatar_lw.png', :class => 'avatar'%>
                 <div class="media-body">
                     <div class="commens-name">
                         <p>Larry K. Williams</p>
                     </div>
-                    <small class="text-muted">President & CEO, The Beacon Council</small>
+                    <small class="text-muted">President &amp; CEO, The Beacon Council</small>
                 </div>
             </div>
         </div>
