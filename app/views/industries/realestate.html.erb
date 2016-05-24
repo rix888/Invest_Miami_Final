@@ -1,11 +1,44 @@
+
 <h4>WHY <span class="red-font">REAL ESTATE</h4>
   <p class="center-text">Rising domestic demand, steady international interest, and a stable
   economy support Miami-Dade's diversifying real estate market.</p>
 
+<div class="row">
+      <div class="col s12">
+        <center>
+        <img src="http://www.spnylaw.com/wp-content/uploads/2016/04/miami-real-estate-1.png" width="950" height="">
+        </center>
+      </div>
+</div>
+
+    <div class="container">
+
+    <div class="row">
+      <div class="col s6"><center>
+         <iframe width="350" height="197" src="https://www.youtube.com/embed/NXuV2ubq8Ro" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="col s5">
+
+      Invest: Miami hosted two VIP panels to further deepen the discussion on infrastructure and development in Miami-Dade.
+      The morning infrastructure panel featured keynote Bill Johnson, Florida Secretary of Commerce and Enterprise Florida
+      President &amp; CEO, Enterprise Florida followed by a panel discussion with Kerri Barsh, Shareholder, Greenberg Traurig,
+      Alice Bravo, Director, Miami-Dade County Department of Transit, MacAdam Glinn, Senior Vice-President for South Florida,
+      Skanska USA, and Kevin Lynskey, Deputy Director, Port Miami
+
+    </div>
+  </div>
+  </div>
+
+
+
 <div class="charts-container">
   <div class="row charts">
     <div class="col s6">
-      <iframe name='ifrm' class='embedcodeifrm' id='ifrm' height='540' marginHeight='0' src='http://www.realtytrac.com/StatsAndTrends/EmbedRTChart/ForeclosureFilings_county:FLDA' frameBorder='0' width='640' marginWidth='0' scrolling='no'></iframe>
+      <iframe name='ifrm' class='embedcodeifrm' id='ifrm' height='540' marginHeight='0'
+      src='http://www.realtytrac.com/StatsAndTrends/EmbedRTChart/ForeclosureFilings_county:FLDA'
+      frameBorder='0' width='640' marginWidth='0' scrolling='no'></iframe>
+
+
       <!-- <div id="highcharts2" style="width: 550px; height: 400px; margin: 0 auto"></div> -->
     </div>
     <div class="col s6">
@@ -26,7 +59,6 @@
 
 
 
-
 <!-- <div class="grid-example col s12 m6 offset-s3"><span class="flow-text">
 <link rel="stylesheet" type="text/css" href="//css.trulia-cdn.com/css/I19_32/css/compiled/combo/pg_truliatool-generate.css" >
 <div class="trulia_tool container300x350 home-finder grey" style="width: 296px; height: 350px;">
@@ -37,7 +69,9 @@
 </div>
 <div> -->
 
+
 <div id="recent_posts">
+
   <h4>Recent Invest:Miami Real Estate Posts</h4>
   <div class ="row">
     <ul>
@@ -57,6 +91,26 @@
     <div class="row">
       <div class="col l6 s12">
         <p class="footer-text"><span class="white-font">THE RIGHT PEOPLE.</span> <span class="red-font">THE RIGHT INDUSTRIES.</span><span class="white-font"> RIGHT NOW.</span></p>
+
+
+  <h3>Recent Real Estate Invest Miami Posts</h3>
+  <ul>
+    <% for entry in FeedEntry.realEstateFeed %>
+    <li><%= link_to entry.title, entry.url %>
+      <p><%#= entry.summary %>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+
+<footer class="process-footer">
+  <div class="container">
+    <!-- <h4><span class="white-font">Contact Us</span></h4> -->
+    <div class="row">
+      <div class="col l6 s12">
+        <p><span class="white-font">THE RIGHT PEOPLE.</span> <span class="red-font">THE RIGHT INDUSTRIES.</span><span class="white-font"> RIGHT NOW.</span></p>
+
       </div>
       <div class="row">
       <div class="col l6 s12">
@@ -71,7 +125,9 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-    <span class="white-font">© 2016 Copyright Text</span>
+
+    <span class="white-font">© 2016 Copyright Invest:Miami</span>
+
     </div>
   </div>
 </footer>
