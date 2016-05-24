@@ -314,7 +314,27 @@ font-size:11px
 @-webkit-keyframes animat_show {
     0%{opacity:0}
     100%{opacity:1}
-}
+  }
 }
 
+/*Reasons why you invest in Miami*/
+#reasons
+{
+    height:100px;
+}
+
+#reasons div
+{
+    text-align: center;
+    color: white;
+    font-family: 'Museo Slab';
+    font-size: 20px;
+    margin:25px;
+    padding:25px;
+    background-color: #d82928;
+}
+
+.hideme
+{
+    opacity:0;
 }
